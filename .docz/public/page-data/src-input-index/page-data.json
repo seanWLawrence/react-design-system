@@ -1,0 +1,24 @@
+{
+  "componentChunkName": "component---src-input-index-mdx",
+  "path": "/src-input-index",
+  "webpackCompilationHash": "",
+  "result": {
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false,
+      "frontmatter": { "name": "Input", "path": "/input" },
+      "entry": {
+        "id": "1ecb8319344329f8ee82085d1ff5f835",
+        "filepath": "src/Input/index.mdx",
+        "fullpath": "/Users/sean/Code/react-design-system/src/Input/index.mdx",
+        "route": "/src-input-index",
+        "slug": "src-input-index",
+        "name": "Input",
+        "menu": "",
+        "headings": [
+          { "slug": "input", "depth": 1, "value": "Input" },
+          { "slug": "basic-usage", "depth": 2, "value": "Basic usage" }
+        ]
+      }
+    }
+  }
+}
