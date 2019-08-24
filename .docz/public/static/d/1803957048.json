@@ -1,8 +1,0 @@
-{
-  "data": {
-    "doczDb": {
-      "id": "ace00e2b-9c46-5e24-a19a-5ed242ca9c64",
-      "db": "{\"config\":{\"title\":\"React Design System\",\"description\":\"My awesome app using docz\",\"menu\":[],\"version\":\"0.1.0\",\"repository\":null,\"native\":false,\"themeConfig\":{},\"separator\":\"-\"},\"entries\":[{\"key\":\"src/Input/index.mdx\",\"value\":{\"name\":\"Input\",\"path\":\"/input\",\"id\":\"1ecb8319344329f8ee82085d1ff5f835\",\"filepath\":\"src/Input/index.mdx\",\"fullpath\":\"/Users/sean/Code/react-design-system/src/Input/index.mdx\",\"link\":\"\",\"slug\":\"src-input-index\",\"route\":\"/src-input-index\",\"menu\":\"\",\"headings\":[{\"slug\":\"input\",\"depth\":1,\"value\":\"Input\"},{\"slug\":\"basic-usage\",\"depth\":2,\"value\":\"Basic usage\"}]}}],\"props\":[]}"
-    }
-  }
-}
