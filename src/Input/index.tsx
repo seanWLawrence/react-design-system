@@ -4,6 +4,7 @@ import { withTheme } from 'emotion-theming';
 
 import { onEvent } from '../utils';
 
+import '../utils/theme.css';
 import './index.css';
 
 type InputReturnValue = { [key: string]: string };
