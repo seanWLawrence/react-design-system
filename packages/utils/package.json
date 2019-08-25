@@ -1,6 +1,6 @@
 {
   "name": "@react-design-system/utils",
-  "version": "0.1.0",
+  "version": "0.0.1-alpha.0",
   "license": "MIT",
   "author": {
     "email": "sean.w.lawrence@gmail.com",
@@ -49,6 +49,5 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
-  },
-  "devDependencies": {}
+  }
 }
