@@ -36,6 +36,7 @@ describe('components', () => {
     describe('required', () => {
       it('displays error when blurred and blank', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let onChange = jest.fn();
 
@@ -49,7 +50,30 @@ describe('components', () => {
           />
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
+
+        fireEvent.blur(input);
+
+        expect(getByText('Required')).toBeInTheDocument();
+      });
+
+      it('displays a star next to the label', () => {
+        let label = 'some label';
+        let labelWithStar = `*${label}`;
+        let name = 'some name';
+        let onChange = jest.fn();
+
+        let { getByLabelText, getByText } = render(
+          <Input
+            label={label}
+            name={name}
+            onChange={onChange}
+            value=""
+            required
+          />
+        );
+
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 
@@ -60,6 +84,7 @@ describe('components', () => {
     describe('hasError', () => {
       it('removes error if has value onBlur', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let value = 'some value';
 
@@ -79,7 +104,7 @@ describe('components', () => {
           </State>
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 
@@ -101,6 +126,7 @@ describe('components', () => {
 
       it('removes error onChange with valid value', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let value = 'some value';
 
@@ -120,7 +146,7 @@ describe('components', () => {
           </State>
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 
@@ -142,6 +168,7 @@ describe('components', () => {
     describe('pattern', () => {
       it('validates against a pattern regex', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let validValue = '@fake.com';
         let pattern = '.*@fake.com$';
@@ -163,7 +190,7 @@ describe('components', () => {
           </State>
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 
@@ -180,6 +207,7 @@ describe('components', () => {
     describe('onBlur', () => {
       it('calls onBlur with name and value object', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let value = 'some value';
         let onChange = jest.fn();
@@ -196,7 +224,7 @@ describe('components', () => {
           />
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 
@@ -207,6 +235,7 @@ describe('components', () => {
     describe('onError', () => {
       it('calls onError with value if a function is passed', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let value = '';
         let onChange = jest.fn();
@@ -223,7 +252,7 @@ describe('components', () => {
           />
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 
@@ -232,6 +261,7 @@ describe('components', () => {
 
       it('returns onError as string is if string passed', () => {
         let label = 'some label';
+        let labelWithStar = `*${label}`;
         let name = 'some name';
         let value = '';
         let onChange = jest.fn();
@@ -248,7 +278,7 @@ describe('components', () => {
           />
         );
 
-        let input = getByLabelText(label);
+        let input = getByLabelText(labelWithStar);
 
         fireEvent.blur(input);
 

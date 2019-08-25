@@ -69,7 +69,8 @@ let Input: FC<InputProps> = ({
     <Fragment>
       <label htmlFor={name} className="Input__label">
         <span>
-          {label} {hasError && <span className="Input__error">{onError}</span>}
+          {required ? `*${label}` : label}{' '}
+          {hasError && <span className="Input__error">{onError}</span>}
         </span>
         <input
           id={name}
