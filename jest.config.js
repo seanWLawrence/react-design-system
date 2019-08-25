@@ -1,7 +1,6 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'js-dom',
-  setupFiles: ['@testing-library/react/dont-cleanup-after-each'],
   setupFilesAfterEnv: ['<rootDir>/src/utils/test-setup.ts'],
   // For a detailed explanation regarding each configuration property, visit:
   // https://jestjs.io/docs/en/configuration.html
