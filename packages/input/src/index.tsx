@@ -1,11 +1,5 @@
 import React, { Fragment, FC, useState, FormEvent } from 'react';
-
-import { withTheme } from 'emotion-theming';
-
-import { onEvent, joinStyles } from '../utils';
-
-import '../utils/theme.css';
-import './index.css';
+import { onEvent, joinStyles } from '@react-design-system/utils';
 
 type InputReturnValue = { [key: string]: string };
 type InputEventFn = (value: InputReturnValue) => void;
@@ -142,4 +136,4 @@ let Input: FC<InputProps> = ({
   );
 };
 
-export default withTheme(Input);
+export default Input;

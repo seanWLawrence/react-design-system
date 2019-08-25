@@ -1,0 +1,54 @@
+{
+  "name": "@react-design-system/utils",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "email": "sean.w.lawrence@gmail.com",
+    "name": "Sean W. Lawrence",
+    "url": "https://slawrence.tech"
+  },
+  "bugs": {
+    "url": "https://github.com/seanWLawrence/react-design-system/issues"
+  },
+  "description": "Utilities for React Design system.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanWlawrence/react-design-system.git",
+    "directory": "packages/utils"
+  },
+  "readme": "README.md",
+  "keywords": [
+    "react",
+    "react-form",
+    "react-input",
+    "react-design-system"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/utils.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {}
+}

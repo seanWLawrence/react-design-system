@@ -1,13 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-
-// const stories = storiesOf('Components/Input', module);
+import { State } from '@react-design-system/utils';
+import { setInputState, onEvent } from '@react-design-system/utils';
+import '@react-design-system/theme/index.css';
 
 import Input from './';
-import State from '../utils/State';
-
-import { setInputState, onEvent } from '../utils';
+import './index.css';
 
 let name = 'name';
 let label = 'Name';

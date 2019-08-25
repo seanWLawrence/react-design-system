@@ -1,5 +1,11 @@
 {
-  "include": ["src", "types"],
+  "include": [
+    "src",
+    "types",
+    "packages/sean-react-utils/src/index.ts",
+    "packages/sean-react-utils/src/test-setup.ts",
+    "packages/sean-react-input/src/Input"
+  ],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",

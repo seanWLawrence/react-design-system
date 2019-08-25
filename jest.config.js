@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'js-dom',
-  setupFilesAfterEnv: ['<rootDir>/src/utils/test-setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   // For a detailed explanation regarding each configuration property, visit:
   // https://jestjs.io/docs/en/configuration.html
 
@@ -146,7 +146,7 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['<rootDir>/src/**/?(*.)spec.ts?(x)'],
+  testMatch: ['<rootDir>/packages/**/?(*.)spec.ts?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [

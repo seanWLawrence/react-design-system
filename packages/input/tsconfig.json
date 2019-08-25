@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "references": [
+    {
+      "path": "../utils"
+    }
+  ],
+  "include": ["src", "../../types"],
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    }
+  }
+}

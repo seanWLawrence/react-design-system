@@ -1,7 +1,9 @@
 import { FormEvent } from 'react';
-import { joinStyles } from './style';
 
-export { joinStyles };
+import { joinStyles } from './style';
+import State from './State';
+
+export { joinStyles, State };
 
 type SetInputStateParams = {
   state: { [key: string]: any };
