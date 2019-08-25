@@ -288,4 +288,57 @@ describe('components', () => {
       });
     });
   });
+
+  describe('classNames', () => {
+    it('adds additional classNames', () => {
+      let inputClassName = 'someInputClassName';
+      let labelClassName = 'someLabelClassName';
+      let label = 'some label';
+      let name = 'some name';
+      let value = '';
+      let onChange = jest.fn();
+      let labelTestId = 'label';
+      let inputTestId = 'input';
+
+      let { getByTestId } = render(
+        <Input
+          label={label}
+          name={name}
+          onChange={onChange}
+          value={value}
+          classNames={{ label: labelClassName, input: inputClassName }}
+        />
+      );
+
+      let labelElement = getByTestId(labelTestId);
+      let inputElement = getByTestId(inputTestId);
+
+      expect(labelElement).toHaveClass(labelClassName);
+      expect(inputElement).toHaveClass(inputClassName);
+    });
+  });
+
+  describe('testIds', () => {
+    it('adds additional testIds', () => {
+      let label = 'some label';
+      let name = 'some name';
+      let value = '';
+      let onChange = jest.fn();
+      let labelTestId = 'some label test id';
+      let inputTestId = 'some input test id';
+
+      let { getByTestId } = render(
+        <Input
+          label={label}
+          name={name}
+          onChange={onChange}
+          value={value}
+          testIds={{ label: labelTestId, input: inputTestId }}
+        />
+      );
+
+      getByTestId(labelTestId);
+      getByTestId(inputTestId);
+    });
+  });
 });

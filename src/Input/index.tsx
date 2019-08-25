@@ -2,7 +2,7 @@ import React, { Fragment, FC, useState, FormEvent } from 'react';
 
 import { withTheme } from 'emotion-theming';
 
-import { onEvent } from '../utils';
+import { onEvent, joinStyles } from '../utils';
 
 import '../utils/theme.css';
 import './index.css';
@@ -24,7 +24,47 @@ interface InputProps {
   required?: boolean;
   onBlur?: InputEventFn;
   onError?: OnErrorFunction | string;
-  type?: 'text';
+  type?:
+    | 'text'
+    | 'button'
+    | 'checkbox'
+    | 'color'
+    | 'date'
+    | 'datetime-local'
+    | 'email'
+    | 'file'
+    | 'hidden'
+    | 'image'
+    | 'month'
+    | 'number'
+    | 'password'
+    | 'radio'
+    | 'range'
+    | 'reset'
+    | 'search'
+    | 'submit'
+    | 'tel'
+    | 'text'
+    | 'time'
+    | 'url'
+    | 'week';
+  classNames?: {
+    label?: string;
+    input?: string;
+  };
+  testIds?: { label?: string; input?: string };
+  autoComplete?: boolean;
+  disabled?: boolean;
+  list?: string;
+  placeholder?: string;
+  readOnly?: boolean;
+  min?: number | Date;
+  max?: number | Date;
+  // for type="checkbox" only
+  checked?: boolean;
+  // for type="images" only
+  multiple?: boolean;
+  alt?: string;
 }
 
 let Input: FC<InputProps> = ({
@@ -37,6 +77,14 @@ let Input: FC<InputProps> = ({
   required = false,
   type = 'text',
   pattern = undefined,
+  classNames: { label: labelClassName = '', input: inputClassName = '' } = {
+    label: '',
+    input: '',
+  },
+  testIds: { label: labelTestId = 'label', input: inputTestId = 'input' } = {
+    label: 'label',
+    input: 'input',
+  },
 }) => {
   let [hasError, setHasError] = useState(false);
 
@@ -67,12 +115,17 @@ let Input: FC<InputProps> = ({
 
   return (
     <Fragment>
-      <label htmlFor={name} className="Input__label">
+      <label
+        htmlFor={name}
+        className={joinStyles('Input__label', labelClassName)}
+        data-testid={labelTestId}
+      >
         <span>
           {required ? `*${label}` : label}{' '}
           {hasError && <span className="Input__error">{onError}</span>}
         </span>
         <input
+          data-testid={inputTestId}
           id={name}
           name={name}
           onChange={onChange}
@@ -82,7 +135,7 @@ let Input: FC<InputProps> = ({
           onBlur={onBlur}
           type={type}
           pattern={pattern}
-          className="Input__input"
+          className={joinStyles('Input__input', inputClassName)}
         />
       </label>
     </Fragment>
