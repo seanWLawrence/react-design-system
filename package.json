@@ -26,7 +26,7 @@
     "test": "jest --env=jsdom",
     "lint": "lerna run lint",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook -o docs"
   },
   "peerDependencies": {
     "react": ">=16"
