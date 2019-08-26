@@ -1,5 +1,6 @@
-export let joinStyles = (...classNames: Array<string | boolean>): string =>
-  classNames.filter(Boolean).join(' ');
+export let joinStyles = (
+  ...classNames: Array<string | boolean | undefined>
+): string => classNames.filter(Boolean).join(' ');
 
 export type ThemeColor =
   | 'first'

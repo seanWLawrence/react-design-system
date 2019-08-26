@@ -1,12 +1,8 @@
-import React, { FC, ReactChild } from 'react';
+import React, { FC, ReactNode, PropsWithRef } from 'react';
 import { joinStyles } from '@react-design-system/utils';
 
 interface ButtonProps {
-  children: ReactChild;
-  classNames?: { button?: string };
-  testIds?: { button?: string };
-  onClick: (optionalValue: any) => void;
-  type?: 'button' | 'submit';
+  children: ReactNode;
   variants?: {
     style?: 'solid' | 'outlined' | 'text';
     shape?: 'squared' | 'rounded';
@@ -14,14 +10,8 @@ interface ButtonProps {
   };
 }
 
-let Button: FC<ButtonProps> = ({
+let Button: FC<ButtonProps & PropsWithRef<JSX.IntrinsicElements['button']>> = ({
   children,
-  classNames: { button: buttonClassName = '' } = {
-    button: '',
-  },
-  testIds: { button: buttonTestId = 'button' } = {
-    button: 'button',
-  },
   variants: {
     style: styleVariant = 'solid',
     shape: shapeVariant = 'squared',
@@ -31,19 +21,15 @@ let Button: FC<ButtonProps> = ({
     shape: 'squared',
     type: 'primary',
   },
-  onClick,
-  type = 'button',
+  ...props
 }) => {
   return (
     <button
+      {...props}
       className={joinStyles(
         'rds-Button__button--base',
-        `rds-Button__button--${styleVariant}-${typeVariant}-${shapeVariant}`,
-        buttonClassName
+        `rds-Button__button--${styleVariant}-${typeVariant}-${shapeVariant}`
       )}
-      data-testid={buttonTestId}
-      onClick={onClick}
-      type={type}
     >
       {children}
     </button>
