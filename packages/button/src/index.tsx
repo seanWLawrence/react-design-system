@@ -1,5 +1,5 @@
 import React, { FC, ReactChild } from 'react';
-import { joinStyles, isEqual, ThemeColor } from '@react-design-system/utils';
+import { joinStyles } from '@react-design-system/utils';
 
 interface ButtonProps {
   children: ReactChild;
@@ -7,9 +7,10 @@ interface ButtonProps {
   testIds?: { button?: string };
   onClick: (optionalValue: any) => void;
   type?: 'button' | 'submit';
-  extensions?: {
-    style?: 'group-start' | 'group-center' | 'group-end' | 'outline' | 'solid';
-    color?: ThemeColor;
+  variants?: {
+    style?: 'solid' | 'outlined' | 'text';
+    shape?: 'squared' | 'rounded';
+    color?: 'primary' | 'secondary' | 'error';
   };
 }
 
@@ -21,12 +22,14 @@ let Button: FC<ButtonProps> = ({
   testIds: { button: buttonTestId = 'button' } = {
     button: 'button',
   },
-  extensions: {
-    style: styleExtension = 'solid',
-    color: colorExtension = 'first',
+  variants: {
+    style: styleVariant = 'solid',
+    shape: shapeVariant = 'squared',
+    color: colorVariant = 'primary',
   } = {
     style: 'solid',
-    color: 'first',
+    shape: 'squared',
+    color: 'primary',
   },
   onClick,
   type = 'button',
@@ -35,16 +38,7 @@ let Button: FC<ButtonProps> = ({
     <button
       className={joinStyles(
         'rds-Button__button--base',
-        isEqual(styleExtension, 'solid') &&
-          `rds-Button__button--solid_${colorExtension}`,
-        isEqual(styleExtension, 'outline') &&
-          `rds-Button__button--outline_${colorExtension}`,
-        isEqual(styleExtension, 'group-start') &&
-          `rds-Button__button--group-start_${colorExtension}`,
-        isEqual(styleExtension, 'group-center') &&
-          `rds-Button__button--group-center_${colorExtension}`,
-        isEqual(styleExtension, 'group-end') &&
-          `rds-Button__button--group-end_${colorExtension}`,
+        `rds-Button__button--${styleVariant}-${colorVariant}-${shapeVariant}`,
         buttonClassName
       )}
       data-testid={buttonTestId}
