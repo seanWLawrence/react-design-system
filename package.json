@@ -1,6 +1,5 @@
 {
   "name": "react-design-system",
-  "version": "0.1.0",
   "author": {
     "email": "sean.w.lawrence@gmail.com",
     "name": "Sean W. Lawrence",
@@ -26,6 +25,7 @@
     "build": "lerna run build",
     "test": "jest --env=jsdom",
     "lint": "lerna run lint",
+    "update": "lerna run build && lerna bootstrap",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o docs"
   },
@@ -47,6 +47,7 @@
     "@babel/core": "^7.5.5",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-knobs": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
@@ -55,7 +56,9 @@
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__react": "^4.0.2",
+    "add": "^2.0.6",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "cz-conventional-changelog": "^3.0.2",
@@ -70,7 +73,8 @@
     "ts-jest": "^24.0.2",
     "tsdx": "^0.8.0",
     "tslib": "^1.10.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "yarn": "^1.17.3"
   },
   "license": "MIT",
   "config": {

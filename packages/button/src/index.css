@@ -1,0 +1,71 @@
+/* Base styles */
+.rds-Button__button--base {
+  border: 0;
+  font-size: var(--font-size-p);
+  font-family: var(--font-family-sans-serif);
+  padding: 0.75em 1em;
+  cursor: pointer;
+  border-radius: 0.25em;
+}
+
+.rds-Button__button--base:hover,
+.rds-Button__button--base:focus {
+  outline: unset;
+}
+
+/* Solid styles*/
+.rds-Button__button--solid_first {
+  background-color: var(--color-first);
+  border: 0.25em solid var(--color-first);
+  color: var(--color-first-inverse);
+}
+
+.rds-Button__button--solid_first:hover,
+.rds-Button__button--solid_first:focus {
+  box-shadow: 0 0 0 3px var(--color-white), 0 0 0 6px var(--color-first);
+}
+
+.rds-Button__button--solid_second {
+  background-color: var(--color-second);
+  border: 0.25em solid var(--color-second);
+  color: var(--color-second-inverse);
+}
+
+.rds-Button__button--solid_second:hover,
+.rds-Button__button--solid_second:focus {
+  box-shadow: 0 0 0 3px var(--color-white), 0 0 0 6px var(--color-second);
+}
+
+.rds-Button__button--solid_third {
+  background-color: var(--color-third);
+  border: 0.25em solid var(--color-third);
+  color: var(--color-third-inverse);
+}
+
+.rds-Button__button--solid_third:hover,
+.rds-Button__button--solid_third:focus {
+  box-shadow: 0 0 0 3px var(--color-white), 0 0 0 6px var(--color-third);
+}
+
+.rds-Button__button--solid_fourth {
+  background-color: var(--color-fourth);
+  border: 0.25em solid var(--color-fourth);
+  color: var(--color-fourth-inverse);
+}
+
+.rds-Button__button--solid_fourth:hover,
+.rds-Button__button--solid_fourth:focus {
+  box-shadow: 0 0 0 3px var(--color-white), 0 0 0 6px var(--color-fourth);
+}
+
+/* Outline styles */
+.rds-Button__button--outline {
+  background-color: var(--color-white);
+  border: 0.25em solid var(--color-first);
+  color: var(--color-first);
+}
+
+.rds-Button__button--outline:focus,
+.rds-Button__button--outline:hover {
+  border: 0.25em solid var(--color-second);
+}
