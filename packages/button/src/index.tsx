@@ -10,7 +10,7 @@ interface ButtonProps {
   variants?: {
     style?: 'solid' | 'outlined' | 'text';
     shape?: 'squared' | 'rounded';
-    color?: 'primary' | 'secondary' | 'error';
+    type?: 'primary' | 'secondary' | 'destructive';
   };
 }
 
@@ -25,11 +25,11 @@ let Button: FC<ButtonProps> = ({
   variants: {
     style: styleVariant = 'solid',
     shape: shapeVariant = 'squared',
-    color: colorVariant = 'primary',
+    type: typeVariant = 'primary',
   } = {
     style: 'solid',
     shape: 'squared',
-    color: 'primary',
+    type: 'primary',
   },
   onClick,
   type = 'button',
@@ -38,7 +38,7 @@ let Button: FC<ButtonProps> = ({
     <button
       className={joinStyles(
         'rds-Button__button--base',
-        `rds-Button__button--${styleVariant}-${colorVariant}-${shapeVariant}`,
+        `rds-Button__button--${styleVariant}-${typeVariant}-${shapeVariant}`,
         buttonClassName
       )}
       data-testid={buttonTestId}

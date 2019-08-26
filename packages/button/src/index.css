@@ -38,15 +38,15 @@
   box-shadow: 0 0 0 2px var(--color-white), 0 0 0 5px var(--color-secondary);
 }
 
-.rds-Button__button--solid-error-squared {
+.rds-Button__button--solid-destructive-squared {
   border-radius: 0.25em;
   background-color: var(--color-error);
   border: 0.125em solid var(--color-error);
   color: var(--color-error-inverse);
 }
 
-.rds-Button__button--solid-error-squared:hover,
-.rds-Button__button--solid-error-squared:focus {
+.rds-Button__button--solid-destructive-squared:hover,
+.rds-Button__button--solid-destructive-squared:focus {
   box-shadow: 0 0 0 2px var(--color-white), 0 0 0 5px var(--color-error);
 }
 
@@ -76,15 +76,15 @@
   box-shadow: 0 0 0 2px var(--color-white), 0 0 0 5px var(--color-secondary);
 }
 
-.rds-Button__button--solid-error-rounded {
+.rds-Button__button--solid-destructive-rounded {
   border-radius: 1em;
   background-color: var(--color-error);
   border: 0.125em solid var(--color-error);
   color: var(--color-error-inverse);
 }
 
-.rds-Button__button--solid-error-rounded:hover,
-.rds-Button__button--solid-error-rounded:focus {
+.rds-Button__button--solid-destructive-rounded:hover,
+.rds-Button__button--solid-destructive-rounded:focus {
   box-shadow: 0 0 0 2px var(--color-white), 0 0 0 5px var(--color-error);
 }
 
@@ -114,15 +114,15 @@
   box-shadow: 0 0 0 2px var(--color-secondary);
 }
 
-.rds-Button__button--outlined-error-squared {
+.rds-Button__button--outlined-destructive-squared {
   border-radius: 0.25em;
   background-color: var(--colorwhite);
   border: 1px solid var(--color-error);
   color: var(--color-error);
 }
 
-.rds-Button__button--outlined-error-squared:hover,
-.rds-Button__button--outlined-error-squared:focus {
+.rds-Button__button--outlined-destructive-squared:hover,
+.rds-Button__button--outlined-destructive-squared:focus {
   box-shadow: 0 0 0 2px var(--color-error);
 }
 
@@ -152,15 +152,15 @@
   box-shadow: 0 0 0 2px var(--color-secondary);
 }
 
-.rds-Button__button--outlined-error-rounded {
+.rds-Button__button--outlined-destructive-rounded {
   border-radius: 1em;
   background-color: var(--color-white);
   border: 1px solid var(--color-error);
   color: var(--color-error);
 }
 
-.rds-Button__button--outlined-error-rounded:hover,
-.rds-Button__button--outlined-error-rounded:focus {
+.rds-Button__button--outlined-destructive-rounded:hover,
+.rds-Button__button--outlined-destructive-rounded:focus {
   box-shadow: 0 0 0 2px var(--color-error);
 }
 
@@ -190,15 +190,15 @@
   background-color: var(--color-secondary-variant);
 }
 
-.rds-Button__button--text-error {
+.rds-Button__button--text-destructive-squared {
   border-radius: 0.25em;
   background-color: var(--color-white);
   border: 0;
   color: var(--color-error);
 }
 
-.rds-Button__button--text-error-squared:hover,
-.rds-Button__button--text-error-squared:focus {
+.rds-Button__button--text-destructive-squared:hover,
+.rds-Button__button--text-destructive-squared:focus {
   background-color: var(--color-error-variant);
 }
 
@@ -228,14 +228,14 @@
   background-color: var(--color-secondary-variant);
 }
 
-.rds-Button__button--text-error-rounded {
+.rds-Button__button--text-destructive-rounded {
   border-radius: 1em;
   background-color: var(--color-white);
   border: 0;
   color: var(--color-error);
 }
 
-.rds-Button__button--text-error-rounded:hover,
-.rds-Button__button--text-error-rounded:focus {
+.rds-Button__button--text-destructive-rounded:hover,
+.rds-Button__button--text-destructive-rounded:focus {
   background-color: var(--color-error-variant);
 }

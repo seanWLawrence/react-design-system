@@ -1,670 +1,670 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { State } from '@react-design-system/utils';
-import { setInputState, onEvent } from '@react-design-system/utils';
-import '@react-design-system/theme/index.css';
+// import React from 'react';
+// import { storiesOf } from '@storybook/react';
+// import { action } from '@storybook/addon-actions';
+// import { State } from '@react-design-system/utils';
+// import { setInputState, onEvent } from '@react-design-system/utils';
+// import '@react-design-system/theme/index.css';
 
-import Input from './';
-import './index.css';
+// import Input from './';
+// import './index.css';
 
-let name = 'name';
-let label = 'Name';
+// let name = 'name';
+// let label = 'Name';
 
-const storiesWithText = storiesOf('Components/Input/Text', module);
+// const storiesWithText = storiesOf('Components/Input/Text', module);
 
-storiesWithText.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithText.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-storiesWithText.add(
-  'Required',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            required
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithText.add(
+//   'Required',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             required
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithColor = storiesOf('Components/Input/Color', module);
+// const storiesWithColor = storiesOf('Components/Input/Color', module);
 
-storiesWithColor.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="color"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithColor.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="color"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithCheckbox = storiesOf('Components/Input/Checkbox', module);
+// const storiesWithCheckbox = storiesOf('Components/Input/Checkbox', module);
 
-storiesWithCheckbox.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="checkbox"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithCheckbox.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="checkbox"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithDate = storiesOf('Components/Input/Date', module);
+// const storiesWithDate = storiesOf('Components/Input/Date', module);
 
-storiesWithDate.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="date"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithDate.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="date"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithDateTimeLocal = storiesOf(
-  'Components/Input/DateTimeLocal',
-  module
-);
+// const storiesWithDateTimeLocal = storiesOf(
+//   'Components/Input/DateTimeLocal',
+//   module
+// );
 
-storiesWithDateTimeLocal.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="datetime-local"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithDateTimeLocal.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="datetime-local"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithEmail = storiesOf('Components/Input/Email', module);
+// const storiesWithEmail = storiesOf('Components/Input/Email', module);
 
-storiesWithEmail.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="email"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithEmail.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="email"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithFile = storiesOf('Components/Input/File', module);
+// const storiesWithFile = storiesOf('Components/Input/File', module);
 
-storiesWithFile.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="file"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithFile.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="file"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithHidden = storiesOf('Components/Input/Hidden', module);
+// const storiesWithHidden = storiesOf('Components/Input/Hidden', module);
 
-storiesWithHidden.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="hidden"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithHidden.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="hidden"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithImage = storiesOf('Components/Input/Image', module);
+// const storiesWithImage = storiesOf('Components/Input/Image', module);
 
-storiesWithImage.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="image"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithImage.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="image"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithMonth = storiesOf('Components/Input/Month', module);
+// const storiesWithMonth = storiesOf('Components/Input/Month', module);
 
-storiesWithMonth.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="month"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithMonth.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="month"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithNumber = storiesOf('Components/Input/Number', module);
+// const storiesWithNumber = storiesOf('Components/Input/Number', module);
 
-storiesWithNumber.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="number"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithNumber.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="number"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithPassword = storiesOf('Components/Input/Password', module);
+// const storiesWithPassword = storiesOf('Components/Input/Password', module);
 
-storiesWithPassword.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="password"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithPassword.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="password"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithRadio = storiesOf('Components/Input/Radio', module);
+// const storiesWithRadio = storiesOf('Components/Input/Radio', module);
 
-storiesWithRadio.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="radio"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithRadio.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="radio"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithRange = storiesOf('Components/Input/Range', module);
+// const storiesWithRange = storiesOf('Components/Input/Range', module);
 
-storiesWithRange.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="range"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithRange.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="range"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithReset = storiesOf('Components/Input/Reset', module);
+// const storiesWithReset = storiesOf('Components/Input/Reset', module);
 
-storiesWithReset.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="reset"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithReset.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="reset"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithSearch = storiesOf('Components/Input/Search', module);
+// const storiesWithSearch = storiesOf('Components/Input/Search', module);
 
-storiesWithSearch.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="search"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithSearch.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="search"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithSubmit = storiesOf('Components/Input/Submit', module);
+// const storiesWithSubmit = storiesOf('Components/Input/Submit', module);
 
-storiesWithSubmit.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="submit"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithSubmit.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="submit"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithTel = storiesOf('Components/Input/Tel', module);
+// const storiesWithTel = storiesOf('Components/Input/Tel', module);
 
-storiesWithTel.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="tel"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithTel.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="tel"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithTime = storiesOf('Components/Input/Time', module);
+// const storiesWithTime = storiesOf('Components/Input/Time', module);
 
-storiesWithTime.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="time"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithTime.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="time"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithUrl = storiesOf('Components/Input/Url', module);
+// const storiesWithUrl = storiesOf('Components/Input/Url', module);
 
-storiesWithUrl.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="url"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithUrl.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="url"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithWeek = storiesOf('Components/Input/Week', module);
+// const storiesWithWeek = storiesOf('Components/Input/Week', module);
 
-storiesWithWeek.add(
-  'Default',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            type="week"
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithWeek.add(
+//   'Default',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             type="week"
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-storiesWithText.add(
-  'Custom onBlur',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <Input
-            value={state[name]}
-            onChange={event => {
-              setInputState({ state, setState })(event);
-              action('onChange')(event);
-            }}
-            name={name}
-            label={label}
-            onBlur={() => alert('Blurred!')}
-          />
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithText.add(
+//   'Custom onBlur',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <Input
+//             value={state[name]}
+//             onChange={event => {
+//               setInputState({ state, setState })(event);
+//               action('onChange')(event);
+//             }}
+//             name={name}
+//             label={label}
+//             onBlur={() => alert('Blurred!')}
+//           />
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-const storiesWithForm = storiesOf('Components/Input/Text/withForm', module);
+// const storiesWithForm = storiesOf('Components/Input/Text/withForm', module);
 
-storiesWithForm.add(
-  'Required',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <form onSubmit={onEvent(() => alert('Submitted!'))}>
-            <Input
-              value={state[name]}
-              onChange={event => {
-                setInputState({ state, setState })(event);
-                action('onChange')(event);
-              }}
-              name={name}
-              label={label}
-              required
-            />
-            <button>Submit</button>
-          </form>
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithForm.add(
+//   'Required',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <form onSubmit={onEvent(() => alert('Submitted!'))}>
+//             <Input
+//               value={state[name]}
+//               onChange={event => {
+//                 setInputState({ state, setState })(event);
+//                 action('onChange')(event);
+//               }}
+//               name={name}
+//               label={label}
+//               required
+//             />
+//             <button>Submit</button>
+//           </form>
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-storiesWithForm.add(
-  'Custom error message',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <form onSubmit={onEvent(() => alert('Submitted!'))}>
-            <Input
-              value={state[name]}
-              onChange={event => {
-                setInputState({ state, setState })(event);
-                action('onChange')(event);
-              }}
-              name={name}
-              label={label}
-              onError="Can't be blank!"
-              required
-            />
-            <button>Submit</button>
-          </form>
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithForm.add(
+//   'Custom error message',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <form onSubmit={onEvent(() => alert('Submitted!'))}>
+//             <Input
+//               value={state[name]}
+//               onChange={event => {
+//                 setInputState({ state, setState })(event);
+//                 action('onChange')(event);
+//               }}
+//               name={name}
+//               label={label}
+//               onError="Can't be blank!"
+//               required
+//             />
+//             <button>Submit</button>
+//           </form>
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
 
-storiesWithForm.add(
-  'Custom validation and error message',
-  () => (
-    <State initialState={{ [name]: '' }}>
-      {({ state, setState }) => {
-        return (
-          <form onSubmit={onEvent(() => alert('Submitted!'))}>
-            <Input
-              value={state[name]}
-              onChange={event => {
-                setInputState({ state, setState })(event);
-                action('onChange')(event);
-              }}
-              name={name}
-              label="Only valid with the word 'specific'"
-              onError={value =>
-                `Expected "specific" and received "${value[name]}"`
-              }
-              required
-              pattern="specific$"
-            />
-            <button>Submit</button>
-          </form>
-        );
-      }}
-    </State>
-  ),
-  { info: { inline: true } }
-);
+// storiesWithForm.add(
+//   'Custom validation and error message',
+//   () => (
+//     <State initialState={{ [name]: '' }}>
+//       {({ state, setState }) => {
+//         return (
+//           <form onSubmit={onEvent(() => alert('Submitted!'))}>
+//             <Input
+//               value={state[name]}
+//               onChange={event => {
+//                 setInputState({ state, setState })(event);
+//                 action('onChange')(event);
+//               }}
+//               name={name}
+//               label="Only valid with the word 'specific'"
+//               onError={value =>
+//                 `Expected "specific" and received "${value[name]}"`
+//               }
+//               required
+//               pattern="specific$"
+//             />
+//             <button>Submit</button>
+//           </form>
+//         );
+//       }}
+//     </State>
+//   ),
+//   { info: { inline: true } }
+// );
