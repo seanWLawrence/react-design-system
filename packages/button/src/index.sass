@@ -1,0 +1,124 @@
+@import '../../theme/theme'
+
+/* Base */
+
+@mixin button-base
+  border: 0
+  font-size: $font-size-body
+  font-family: $font-family-sans-serif
+  padding: 0.5em 0.75em
+  cursor: pointer
+
+  &:hover, &:focus 
+    outline: unset
+
+/* Solid squared */
+
+@mixin button-solid-squared($color, $color-inverse) 
+  @include button-base
+
+  border-radius: 0.25em
+  box-shadow: 0 0 0 .25em solid transparent  
+  color: $color-inverse
+  background-color: $color
+
+  &:hover, &:focus 
+    background-color: lighten($color, 2.5%)
+    box-shadow: 0 0 0 .225rem lighten($color, 30%)
+
+.rds-Button__button--solid-primary-squared 
+  @include button-solid-squared($color: $color-primary, $color-inverse: $color-primary-inverse)
+  
+.rds-Button__button--solid-secondary-squared 
+  @include button-solid-squared($color: $color-secondary, $color-inverse: $color-secondary-inverse)
+
+.rds-Button__button--solid-destructive-squared 
+  @include button-solid-squared($color: $color-error, $color-inverse: $color-error-inverse)
+
+/* Solid rounded */
+
+@mixin button-solid-rounded($color, $color-inverse) 
+  @include button-solid-squared($color: $color, $color-inverse: $color-inverse)
+  border-radius: 1em
+
+.rds-Button__button--solid-primary-rounded 
+  @include button-solid-rounded($color: $color-primary, $color-inverse: $color-primary-inverse)
+  
+.rds-Button__button--solid-secondary-rounded 
+  @include button-solid-rounded($color: $color-secondary, $color-inverse: $color-secondary-inverse)
+
+.rds-Button__button--solid-destructive-rounded 
+  @include button-solid-rounded($color: $color-error, $color-inverse: $color-error-inverse)
+
+/* Outlined squared */
+
+@mixin button-outlined-squared($color, $color-inverse) 
+  @include button-solid-squared($color: $color, $color-inverse: $color-inverse)
+  background-color: transparent
+  border: 1px solid $color
+  color: $color
+
+  &:hover, &:focus
+    background-color: transparent
+    color: lighten($color, 2.5%)
+
+.rds-Button__button--outlined-primary-squared 
+  @include button-outlined-squared($color: $color-primary, $color-inverse: $color-primary-inverse)
+  
+
+.rds-Button__button--outlined-secondary-squared 
+  @include button-outlined-squared($color: $color-secondary, $color-inverse: $color-secondary-inverse)
+
+.rds-Button__button--outlined-destructive-squared 
+  @include button-outlined-squared($color: $color-error, $color-inverse: $color-error-inverse)
+
+/* Outlined rounded */
+
+@mixin button-outlined-rounded($color, $color-inverse) 
+  @include button-outlined-squared($color: $color, $color-inverse: $color-inverse)
+  border-radius: 1em
+
+.rds-Button__button--outlined-primary-rounded 
+  @include button-outlined-rounded($color: $color-primary, $color-inverse: $color-primary-inverse)
+  
+
+.rds-Button__button--outlined-secondary-rounded 
+  @include button-outlined-rounded($color: $color-secondary, $color-inverse: $color-secondary-inverse)
+
+.rds-Button__button--outlined-destructive-rounded 
+  @include button-outlined-rounded($color: $color-error, $color-inverse: $color-error-inverse)
+
+/* Text squared */
+
+@mixin button-text-squared($color, $color-inverse) 
+  @include button-outlined-squared($color: $color, $color-inverse: $color-inverse)
+  border: 0
+
+  &:focus,
+  &:hover 
+    background-color: lighten($color, 50%)
+    box-shadow: none
+
+.rds-Button__button--text-primary-squared 
+  @include button-text-squared($color: $color-primary, $color-inverse: $color-primary-inverse)
+  
+.rds-Button__button--text-secondary-squared 
+  @include button-text-squared($color: $color-secondary, $color-inverse: $color-secondary-inverse)
+
+.rds-Button__button--text-destructive-squared 
+  @include button-text-squared($color: $color-error, $color-inverse: $color-error-inverse)
+
+/* Text rounded */
+
+@mixin button-text-rounded($color, $color-inverse) 
+  @include button-text-squared($color: $color, $color-inverse: $color-inverse)
+  border-radius: 1em
+
+.rds-Button__button--text-primary-rounded 
+  @include button-text-rounded($color: $color-primary, $color-inverse: $color-primary-inverse)
+  
+.rds-Button__button--text-secondary-rounded 
+  @include button-text-rounded($color: $color-secondary, $color-inverse: $color-secondary-inverse)
+
+.rds-Button__button--text-destructive-rounded 
+  @include button-text-rounded($color: $color-error, $color-inverse: $color-error-inverse)

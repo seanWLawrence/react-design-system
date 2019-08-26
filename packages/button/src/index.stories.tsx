@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
-import '@react-design-system/theme/index.css';
-import './index.css';
+import './index.sass';
 import Button from './';
 
 const buttonStories = storiesOf('Components/Button', module);
@@ -11,7 +10,6 @@ buttonStories.add(
   'With knobs',
   () => (
     <Button
-      onClick={() => {}}
       variants={{
         type: select(
           'Color',
