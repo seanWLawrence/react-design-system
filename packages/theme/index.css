@@ -16,19 +16,21 @@ body {
 
   --color-black: rgb(30, 30, 30);
 
-  --color-first: #574b90;
-  --color-first-inverse: rgb(255, 255, 255);
+  --color-primary: rgb(87, 75, 144);
+  --color-primary-variant: rgba(87, 75, 144, 0.125);
+  --color-primary-inverse: var(--color-white);
 
-  --color-second: cornflowerblue;
-  --color-second-inverse: rgb(255, 255, 255);
+  --color-secondary: rgb(70, 70, 70);
+  --color-secondary-variant: rgba(70, 70, 70, 0.125);
+  --color-secondary-inverse: var(--color-white);
 
-  --color-third: #ea8685;
-  --color-third-inverse: rgb(255, 255, 255);
+  --color-error: rgb(194, 54, 22);
+  --color-error-variant: rgba(194, 54, 22, 0.125);
+  --color-error-inverse: var(--color-white);
 
-  --color-fourth: #f7d794;
-  --color-fourth-inverse: rgb(70, 70, 70);
-
-  --color-error: rgba(250, 0, 0, 0.7);
   --color-warning: rgba(250, 240, 100, 0.9);
+  --color-warning-inverse: var(--color-gray-darkest);
+
   --color-success: rgba(0, 180, 0, 0.7);
+  --color-success-inverse: var(--color-gray-darkest);
 }
