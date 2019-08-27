@@ -6,6 +6,9 @@ import Button from './';
 
 const buttonStories = storiesOf('Components/Button', module);
 
+/**
+ * Utility components for displaying the stories nicer
+ */
 let Row: FC<{ children: ReactNode; title?: string }> = ({
   children,
   title,
