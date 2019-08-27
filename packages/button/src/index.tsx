@@ -27,8 +27,8 @@ let Button: FC<ButtonProps & PropsWithRef<JSX.IntrinsicElements['button']>> = ({
     <button
       {...props}
       className={joinStyles(
-        'rds-Button__button--base',
-        `rds-Button__button--${styleVariant}-${typeVariant}-${shapeVariant}`
+        `rds-Button__button--${styleVariant}-${typeVariant}-${shapeVariant}`,
+        props.className
       )}
     >
       {children}

@@ -36,10 +36,10 @@ Accessible, easily customizable components for building a design system in React
   - [ ] Select
   - [ ] TextArea
 - [ ] UI elements
-  - [ ] Button
+  - [x] Button
     - [ ] Group
-    - [ ] Outline
-    - [ ] Solid
+    - [x] Outline
+    - [x] Solid
   - [ ] Accordion
   - [ ] Abbreviation
   - [ ] Alert
