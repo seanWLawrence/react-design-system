@@ -36,7 +36,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
-      "post-push": "yarn storybook:push"
+      "pre-push": "yarn storybook:push"
     }
   },
   "prettier": {
