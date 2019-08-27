@@ -1,10 +1,239 @@
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
 import './index.sass';
 import Button from './';
 
 const buttonStories = storiesOf('Components/Button', module);
+
+let Row: FC<{ children: ReactNode; title?: string }> = ({
+  children,
+  title,
+}) => (
+  <div style={{ margin: '30px 20px' }}>
+    <h4 style={{ fontFamily: 'sans-serif', marginBottom: 10, color: '#333' }}>
+      {title}
+    </h4>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        maxWidth: 300,
+        marginBottom: 0,
+      }}
+    >
+      {children}
+    </div>
+  </div>
+);
+
+let Margin = () => <div style={{ marginBottom: 40 }}></div>;
+
+buttonStories.add(
+  'All',
+  () => (
+    <>
+      <Row title="Primary">
+        <Button
+          variants={{
+            type: 'primary',
+            shape: 'squared',
+            style: 'solid',
+          }}
+        >
+          Save
+        </Button>
+
+        <Button
+          variants={{
+            type: 'primary',
+            style: 'outlined',
+            shape: 'squared',
+          }}
+        >
+          Learn more
+        </Button>
+
+        <Button
+          variants={{
+            type: 'primary',
+            style: 'text',
+            shape: 'squared',
+          }}
+        >
+          Learn more
+        </Button>
+      </Row>
+
+      <Row>
+        <Button
+          variants={{
+            type: 'primary',
+            shape: 'rounded',
+            style: 'solid',
+          }}
+        >
+          Save
+        </Button>
+
+        <Button
+          variants={{
+            type: 'primary',
+            style: 'outlined',
+            shape: 'rounded',
+          }}
+        >
+          Learn more
+        </Button>
+
+        <Button
+          variants={{
+            type: 'primary',
+            style: 'text',
+            shape: 'rounded',
+          }}
+        >
+          Learn more
+        </Button>
+      </Row>
+
+      <Margin />
+
+      <Row title="Secondary">
+        <Button
+          variants={{
+            type: 'secondary',
+            shape: 'squared',
+            style: 'solid',
+          }}
+        >
+          Cancel
+        </Button>
+
+        <Button
+          variants={{
+            type: 'secondary',
+            style: 'outlined',
+            shape: 'squared',
+          }}
+        >
+          Cancel
+        </Button>
+
+        <Button
+          variants={{
+            type: 'secondary',
+            style: 'text',
+            shape: 'squared',
+          }}
+        >
+          Learn more
+        </Button>
+      </Row>
+
+      <Row>
+        <Button
+          variants={{
+            type: 'secondary',
+            shape: 'rounded',
+            style: 'solid',
+          }}
+        >
+          Cancel
+        </Button>
+
+        <Button
+          variants={{
+            type: 'secondary',
+            style: 'outlined',
+            shape: 'rounded',
+          }}
+        >
+          Cancel
+        </Button>
+
+        <Button
+          variants={{
+            type: 'secondary',
+            style: 'text',
+            shape: 'rounded',
+          }}
+        >
+          Learn more
+        </Button>
+      </Row>
+
+      <Margin />
+
+      <Row title="Destructive">
+        <Button
+          variants={{
+            type: 'destructive',
+            shape: 'squared',
+            style: 'solid',
+          }}
+        >
+          Delete
+        </Button>
+
+        <Button
+          variants={{
+            type: 'destructive',
+            style: 'outlined',
+            shape: 'squared',
+          }}
+        >
+          Reset
+        </Button>
+
+        <Button
+          variants={{
+            type: 'destructive',
+            style: 'text',
+            shape: 'squared',
+          }}
+        >
+          Dismiss
+        </Button>
+      </Row>
+
+      <Row>
+        <Button
+          variants={{
+            type: 'destructive',
+            shape: 'rounded',
+            style: 'solid',
+          }}
+        >
+          Delete
+        </Button>
+
+        <Button
+          variants={{
+            type: 'destructive',
+            style: 'outlined',
+            shape: 'rounded',
+          }}
+        >
+          Reset
+        </Button>
+
+        <Button
+          variants={{
+            type: 'destructive',
+            style: 'text',
+            shape: 'rounded',
+          }}
+        >
+          Dismiss
+        </Button>
+      </Row>
+    </>
+  ),
+  {
+    info: { inline: true },
+  }
+);
 
 buttonStories.add(
   'With knobs',
