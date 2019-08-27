@@ -1,60 +1,11 @@
-import { FC } from 'react';
-declare type InputReturnValue = {
-  [key: string]: string;
-};
-declare type InputEventFn = (value: InputReturnValue) => void;
-declare type OnErrorFunction = (value: InputReturnValue) => string;
-interface InputProps {
-  name: string;
-  onChange: InputEventFn;
-  value: string | null;
-  label: string;
-  pattern?: string;
-  required?: boolean;
-  onBlur?: InputEventFn;
-  onError?: OnErrorFunction | string;
-  type?:
-    | 'text'
-    | 'button'
-    | 'checkbox'
-    | 'color'
-    | 'date'
-    | 'datetime-local'
-    | 'email'
-    | 'file'
-    | 'hidden'
-    | 'image'
-    | 'month'
-    | 'number'
-    | 'password'
-    | 'radio'
-    | 'range'
-    | 'reset'
-    | 'search'
-    | 'submit'
-    | 'tel'
-    | 'text'
-    | 'time'
-    | 'url'
-    | 'week';
-  classNames?: {
-    label?: string;
-    input?: string;
+import { FC, ReactNode, PropsWithRef } from 'react';
+interface HeadingProps {
+  children: ReactNode;
+  variants?: {
+    type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   };
-  testIds?: {
-    label?: string;
-    input?: string;
-  };
-  autoComplete?: boolean;
-  disabled?: boolean;
-  list?: string;
-  placeholder?: string;
-  readOnly?: boolean;
-  min?: number | Date;
-  max?: number | Date;
-  checked?: boolean;
-  multiple?: boolean;
-  alt?: string;
 }
-declare let Input: FC<InputProps>;
-export default Input;
+declare let Heading: FC<
+  HeadingProps & PropsWithRef<JSX.IntrinsicElements['h1']>
+>;
+export default Heading;
