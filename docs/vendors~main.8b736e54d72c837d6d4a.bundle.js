@@ -21801,10 +21801,12 @@ object-assign
       function showError(_ref2) {
         var title = _ref2.title,
           description = _ref2.description;
-        _addons.default.getChannel().emit(_coreEvents.default.STORY_ERRORED, {
-          title: title,
-          description: description,
-        }),
+        _addons.default
+          .getChannel()
+          .emit(_coreEvents.default.STORY_ERRORED, {
+            title: title,
+            description: description,
+          }),
           showErrorDisplay({ message: title, stack: description });
       }
       function showException(exception) {
@@ -59111,10 +59113,12 @@ object-assign
           arguments.length > 0 && void 0 !== arguments[0]
             ? arguments[0]
             : +new Date();
-        _addons.default.getChannel().emit(_shared.SET, {
-          knobs: knobStore.getAll(),
-          timestamp: timestamp,
-        });
+        _addons.default
+          .getChannel()
+          .emit(_shared.SET, {
+            knobs: knobStore.getAll(),
+            timestamp: timestamp,
+          });
       }
       var resetAndForceUpdate = function resetAndForceUpdate() {
           knobStore.markAllUnused(), forceReRender();
@@ -59849,4 +59853,4 @@ object-assign
     },
   ],
 ]);
-//# sourceMappingURL=vendors~main.935562eaf2fa4b3df9e0.bundle.js.map
+//# sourceMappingURL=vendors~main.8b736e54d72c837d6d4a.bundle.js.map
