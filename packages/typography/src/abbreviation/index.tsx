@@ -12,7 +12,10 @@ export let Abbreviation: FC<
   return (
     <abbr
       {...props}
-      className={joinStyles('rds-Abbreviation__abbreviation-wrapper')}
+      className={joinStyles(
+        'rds-Abbreviation__abbreviation-wrapper',
+        props.className
+      )}
       title={title}
       tabIndex={0}
     >
