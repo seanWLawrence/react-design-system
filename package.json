@@ -28,15 +28,14 @@
     "update": "lerna run build && lerna bootstrap",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o docs",
-    "storybook:pre-push": "yarn storybook:build && git add . && git commit -m \"update storybook documentation\" --no-verify"
+    "storybook:deploy": "yarn storybook:build && git add . && git commit -m \"update storybook documentation\" --no-verify && git push"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "yarn storybook:pre-push"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "prettier": {
