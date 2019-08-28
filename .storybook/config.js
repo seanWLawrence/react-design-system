@@ -1,6 +1,7 @@
 import { configure, addDecorator } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
 
 // automatically import all files ending in *.stories.tsx
 const req = require.context('../packages', true, /\.stories\.tsx$/);
@@ -14,6 +15,8 @@ addDecorator(withA11y);
  * Allow props to be dynamically updated
  */
 addDecorator(withKnobs);
+
+addDecorator(withInfo);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
