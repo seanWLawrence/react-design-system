@@ -1,0 +1,45 @@
+@import '../../../theme/theme'
+
+.rds-Abbreviation__abbreviation-wrapper
+  position: relative
+  font-family: $font-family-sans-serif
+  font-size: $font-size-body
+  border-bottom: 2px dotted $color-primary
+  text-decoration: none
+
+  &:focus
+    outline: none
+    padding: .25rem
+    font-style: italic
+    background-color: lighten($color-primary, 50%)
+    font-size: .9rem
+    border-radius: .25em
+    border-bottom: 0
+
+  &:hover::after,
+  &:focus::after
+    font-family: $font-family-sans-serif
+    font-size: $font-size-body * .8
+    visibility: visible
+
+  &::after 
+    position: absolute
+    white-space: nowrap
+    border-radius: .25em
+    background-color: $color-gray-lighter
+    padding: .5em .75em
+    margin-top: 1.75rem
+    transform: translate(-50%, 0)
+    visibility: hidden
+    content: attr(title)
+    z-index: 2
+
+/* Positions the title off screen, 
+  so screen readers will read the title out loud on focus */
+.rds-Abbreviation__abbreviation-title--hidden
+  position: absolute
+  left: -10000px
+  top: auto
+  width: 1px
+  height: 1px
+  overflow: hidden
