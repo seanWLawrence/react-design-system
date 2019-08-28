@@ -5,7 +5,7 @@ interface HeadingProps {
     type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   };
 }
-declare let Heading: FC<
+export declare let Heading: FC<
   HeadingProps & PropsWithRef<JSX.IntrinsicElements['h1']>
 >;
 export default Heading;
