@@ -59,7 +59,7 @@ Accessible, easily customizable components for building a design system in React
     - [ ] Circle
     - [ ] Cradle
 - [ ] Typography
-  - [ ] Abbreviation
+  - [x] Abbreviation
   - [ ] Blockquote
   - [ ] Caption
   - [ ] Code
