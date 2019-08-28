@@ -4,7 +4,7 @@ import { select, text } from '@storybook/addon-knobs';
 import './index.sass';
 import Heading from './';
 
-const headingStories = storiesOf('Components/Heading', module);
+const headingStories = storiesOf('Typography/Heading', module);
 
 headingStories.add(
   'All',

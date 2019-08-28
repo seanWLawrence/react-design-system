@@ -42,21 +42,29 @@ Accessible, easily customizable components for building a design system in React
     - [x] Text
   - [ ] Button group
   - [ ] Accordion
-  - [ ] Abbreviation
   - [ ] Alert
   - [ ] Badge
-  - [ ] Blockquote
   - [ ] Breadcrumbs
     - [ ] Breadcrumb
     - [ ]
-  - [ ] Caption
   - [ ] Card
+  - [ ] Collapse
+  - [ ] Embed
+  - [ ] Header
+  - [ ] Image
+    - [ ] Responsive
+    - [ ] Thumbnail
+  - [ ] Modal
+  - [ ] Spinners
+    - [ ] Circle
+    - [ ] Cradle
+- [ ] Typography
+  - [ ] Abbreviation
+  - [ ] Blockquote
+  - [ ] Caption
   - [ ] Code
     - [ ] Inline
     - [ ] Block
-  - [ ] Citation
-  - [ ] Collapse
-  - [ ] Embed
   - [ ] Emphasis
   - [x] Heading
     - [x] One
@@ -65,22 +73,13 @@ Accessible, easily customizable components for building a design system in React
     - [x] Four
     - [x] Five
     - [x] Six
-  - [ ] Header
   - [ ] Highlight
-  - [ ] Image
-    - [ ] Responsive
-    - [ ] Thumbnail
-  - [ ] Lead
   - [ ] List
     - [ ] Unordered
     - [ ] Ordered
     - [ ] Description
-  - [ ] Modal
   - [ ] Paragraph
   - [ ] Small
-  - [ ] Spinners
-    - [ ] Circle
-    - [ ] Cradle
   - [ ] Strikethrough
   - [ ] Strong
   - [ ] Underline

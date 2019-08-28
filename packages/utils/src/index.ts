@@ -2,9 +2,8 @@ import { FormEvent } from 'react';
 
 import { joinStyles, ThemeColor } from './style';
 import { isEqual, safeArray } from './fp';
-import State from './State';
 
-export { joinStyles, State, isEqual, safeArray, ThemeColor };
+export { joinStyles, isEqual, safeArray, ThemeColor };
 
 type SetInputStateParams = {
   state: { [key: string]: any };

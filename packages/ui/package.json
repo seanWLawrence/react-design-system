@@ -1,5 +1,5 @@
 {
-  "name": "@react-design-system/button",
+  "name": "@react-design-system/ui",
   "version": "0.0.2-alpha.0",
   "license": "MIT",
   "author": {
@@ -10,23 +10,22 @@
   "bugs": {
     "url": "https://github.com/seanWLawrence/react-design-system/issues"
   },
-  "description": "Button for React Design System.",
+  "description": "UI components for React Design System.",
   "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/seanWlawrence/react-design-system.git",
-    "directory": "packages/button"
+    "directory": "packages/ui"
   },
   "style": "src/index.css",
   "readme": "README.md",
   "keywords": [
     "react",
-    "react-form",
-    "react-input",
+    "ui",
     "react-design-system"
   ],
   "main": "dist/index.js",
-  "module": "dist/button.esm.js",
+  "module": "dist/ui.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"

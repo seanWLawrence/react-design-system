@@ -4,7 +4,7 @@ import { select, text } from '@storybook/addon-knobs';
 import './index.sass';
 import Button from './';
 
-const buttonStories = storiesOf('Components/Button', module);
+const buttonStories = storiesOf('UI/Button', module);
 
 /**
  * Utility components for displaying the stories nicer
