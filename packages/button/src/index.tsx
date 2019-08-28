@@ -5,20 +5,14 @@ interface ButtonProps {
   children: ReactNode;
   variants?: {
     style?: 'solid' | 'outlined' | 'text';
-    shape?: 'squared' | 'rounded';
     type?: 'primary' | 'secondary' | 'destructive';
   };
 }
 
 let Button: FC<ButtonProps & PropsWithRef<JSX.IntrinsicElements['button']>> = ({
   children,
-  variants: {
-    style: styleVariant = 'solid',
-    shape: shapeVariant = 'squared',
-    type: typeVariant = 'primary',
-  } = {
+  variants: { style: styleVariant = 'solid', type: typeVariant = 'primary' } = {
     style: 'solid',
-    shape: 'squared',
     type: 'primary',
   },
   ...props
@@ -27,7 +21,7 @@ let Button: FC<ButtonProps & PropsWithRef<JSX.IntrinsicElements['button']>> = ({
     <button
       {...props}
       className={joinStyles(
-        `rds-Button__button--${styleVariant}-${typeVariant}-${shapeVariant}`,
+        `rds-Button__button--${styleVariant}-${typeVariant}`,
         props.className
       )}
     >
