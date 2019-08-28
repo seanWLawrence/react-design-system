@@ -9,7 +9,9 @@ interface ButtonProps {
   };
 }
 
-let Button: FC<ButtonProps & PropsWithRef<JSX.IntrinsicElements['button']>> = ({
+export let Button: FC<
+  ButtonProps & PropsWithRef<JSX.IntrinsicElements['button']>
+> = ({
   children,
   variants: { style: styleVariant = 'solid', type: typeVariant = 'primary' } = {
     style: 'solid',

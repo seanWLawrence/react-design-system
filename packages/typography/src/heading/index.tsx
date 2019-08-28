@@ -8,7 +8,9 @@ interface HeadingProps {
   };
 }
 
-let Heading: FC<HeadingProps & PropsWithRef<JSX.IntrinsicElements['h1']>> = ({
+export let Heading: FC<
+  HeadingProps & PropsWithRef<JSX.IntrinsicElements['h1']>
+> = ({
   children,
   variants: { type: typeVariant = 'h6' } = {
     type: 'h6',
