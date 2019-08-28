@@ -60,7 +60,7 @@ Accessible, easily customizable components for building a design system in React
     - [ ] Cradle
 - [ ] Typography
   - [x] Abbreviation
-  - [ ] Blockquote
+  - [x] Blockquote
   - [ ] Caption
   - [ ] Code
     - [ ] Inline
