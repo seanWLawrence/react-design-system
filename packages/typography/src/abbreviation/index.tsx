@@ -7,7 +7,7 @@ interface AbbreviationProps {
 }
 
 export let Abbreviation: FC<
-  AbbreviationProps & PropsWithRef<JSX.IntrinsicElements['h1']>
+  AbbreviationProps & PropsWithRef<JSX.IntrinsicElements['abbr']>
 > = ({ children, title, ...props }) => {
   return (
     <abbr
