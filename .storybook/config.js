@@ -16,7 +16,7 @@ addDecorator(withA11y);
  */
 addDecorator(withKnobs);
 
-addDecorator(withInfo);
+addDecorator(withInfo({ info: { inline: false } }));
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
