@@ -39,6 +39,7 @@ Accessible, easily customizable components for building a design system in React
   - [x] Button
     - [x] Outline
     - [x] Solid
+    - [x] Text
   - [ ] Button group
   - [ ] Accordion
   - [ ] Abbreviation
@@ -57,19 +58,13 @@ Accessible, easily customizable components for building a design system in React
   - [ ] Collapse
   - [ ] Embed
   - [ ] Emphasis
-  - [ ] Heading
-    - [ ] One
-    - [ ] Two
-    - [ ] Three
-    - [ ] Four
-    - [ ] Five
-    - [ ] Six
-    - [ ] DisplayOne
-    - [ ] DisplayTwo
-    - [ ] DisplayThree
-    - [ ] DisplayFour
-    - [ ] DisplayFive
-    - [ ] DisplaySix
+  - [x] Heading
+    - [x] One
+    - [x] Two
+    - [x] Three
+    - [x] Four
+    - [x] Five
+    - [x] Six
   - [ ] Header
   - [ ] Highlight
   - [ ] Image
