@@ -73,7 +73,7 @@ Accessible, easily customizable components for building a design system in React
     - [x] Four
     - [x] Five
     - [x] Six
-  - [ ] Highlight
+  - [x] Highlight
   - [ ] List
     - [ ] Unordered
     - [ ] Ordered
