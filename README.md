@@ -65,7 +65,7 @@ Accessible, easily customizable components for building a design system in React
   - [ ] Code
     - [ ] Inline
     - [ ] Block
-  - [ ] Emphasis
+  - [x] Emphasis
   - [x] Heading
     - [x] One
     - [x] Two
