@@ -1,11 +1,8 @@
 import { FC, ReactNode, PropsWithRef } from 'react';
-interface HeadingProps {
+interface EmphasisProps {
   children: ReactNode;
-  variants?: {
-    type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  };
 }
-export declare let Heading: FC<
-  HeadingProps & PropsWithRef<JSX.IntrinsicElements['h1']>
+export declare let Emphasis: FC<
+  EmphasisProps & PropsWithRef<JSX.IntrinsicElements['em']>
 >;
-export default Heading;
+export default Emphasis;
