@@ -113,6 +113,8 @@ Accessible, easily customizable components for building a design system in React
 
 ## Installation
 
+> Note: this package is not available yet
+
 ```sh
 yarn add @react-design-system/core
 ```
