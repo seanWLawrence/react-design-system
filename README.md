@@ -6,35 +6,6 @@ Accessible, easily customizable components for building a design system in React
 
 ## TODO
 
-- [ ] Form elements
-  - [ ] Form
-  - [ ] Legend
-  - [ ] Input
-    - [ ] Button
-    - [ ] Checkbox
-    - [ ] Color
-    - [ ] Date
-    - [ ] DateTime-Local
-    - [ ] Email
-    - [ ] File
-    - [ ] Hidden
-    - [ ] Image
-    - [ ] Month
-    - [ ] Number
-    - [ ] Password
-    - [ ] Radio
-    - [ ] Range
-    - [ ] Reset
-    - [ ] Search
-    - [ ] Submit
-    - [ ] Tel
-    - [ ] Text
-    - [ ] Time
-    - [ ] Url
-    - [ ] Week
-  - [ ] Label
-  - [ ] Select
-  - [ ] TextArea
 - [ ] UI elements
   - [x] Button
     - [x] Outline
@@ -63,7 +34,7 @@ Accessible, easily customizable components for building a design system in React
   - [x] Blockquote
   - [ ] Caption
   - [ ] Code
-    - [ ] Inline
+    - [x] Inline
     - [ ] Block
   - [x] Emphasis
   - [x] Heading
@@ -83,6 +54,35 @@ Accessible, easily customizable components for building a design system in React
   - [ ] Strikethrough
   - [ ] Strong
   - [ ] Underline
+- [ ] Form elements
+  - [ ] Form
+  - [ ] Legend
+  - [ ] Input
+    - [ ] Button
+    - [ ] Checkbox
+    - [x] Color
+    - [x] Date
+    - [x] DateTime-Local
+    - [x] Email
+    - [ ] File
+    - [x] Hidden
+    - [ ] Image
+    - [x] Month
+    - [x] Number
+    - [x] Password
+    - [ ] Radio
+    - [ ] Range
+    - [ ] Reset
+    - [ ] Search
+    - [ ] Submit
+    - [x] Tel
+    - [x] Text
+    - [x] Time
+    - [x] Url
+    - [x] Week
+  - [ ] Label
+  - [ ] Select
+  - [ ] TextArea
 - [ ] Layout
   - [ ] Column
   - [ ] Fieldset
