@@ -1,8 +1,6 @@
 import { FC, ReactNode, PropsWithRef } from 'react';
 interface EmphasisProps {
-  children: ReactNode;
+    children: ReactNode;
 }
-export declare let Emphasis: FC<
-  EmphasisProps & PropsWithRef<JSX.IntrinsicElements['em']>
->;
+export declare let Emphasis: FC<EmphasisProps & PropsWithRef<JSX.IntrinsicElements['em']>>;
 export default Emphasis;
