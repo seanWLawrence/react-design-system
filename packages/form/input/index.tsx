@@ -10,12 +10,12 @@ type InputEventObj = FormEvent<HTMLInputElement> & {
 };
 
 interface InputProps {
-  name: string;
-  onChange: InputEventFn;
   value: string | null;
-  label: string;
+  name?: string;
+  label?: string;
   pattern?: string;
   required?: boolean;
+  onChange?: InputEventFn;
   onBlur?: InputEventFn;
   onError?: OnErrorFunction | string;
   type?:
@@ -63,7 +63,7 @@ interface InputProps {
 
 let Input: FC<InputProps> = ({
   label,
-  name,
+  name = '',
   onChange: onChangeProp,
   onBlur: onBlurProp = () => {},
   onError: onErrorProp = 'Required',
@@ -89,7 +89,9 @@ let Input: FC<InputProps> = ({
       value ? setHasError(false) : setHasError(true);
     }
 
-    onBlurProp({ [name]: safeValue });
+    if (name) {
+      onBlurProp({ [name]: safeValue });
+    }
   });
 
   let onChange = ({ target: { value }, target }: InputEventObj) => {
@@ -97,7 +99,9 @@ let Input: FC<InputProps> = ({
       setHasError(false);
     }
 
-    onChangeProp({ [name]: value });
+    if (onChangeProp) {
+      onChangeProp({ [name]: value });
+    }
   };
 
   let safeValue = (value !== null && value) || '';
@@ -111,12 +115,12 @@ let Input: FC<InputProps> = ({
     <Fragment>
       <label
         htmlFor={name}
-        className={joinStyles('Input__label', labelClassName)}
+        className={joinStyles('rds-Input__label', labelClassName)}
         data-testid={labelTestId}
       >
         <span>
           {required ? `*${label}` : label}{' '}
-          {hasError && <span className="Input__error">{onError}</span>}
+          {hasError && <span className="rds-Input__error">{onError}</span>}
         </span>
         <input
           data-testid={inputTestId}
@@ -129,7 +133,7 @@ let Input: FC<InputProps> = ({
           onBlur={onBlur}
           type={type}
           pattern={pattern}
-          className={joinStyles('Input__input', inputClassName)}
+          className={joinStyles('rds-Input__input', inputClassName)}
         />
       </label>
     </Fragment>

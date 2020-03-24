@@ -1,192 +1,398 @@
-// import React from 'react';
-// import { storiesOf } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
-// import { State } from '@react-design-system/utils';
-// import { setInputState, onEvent } from '@react-design-system/utils';
-// import '@react-design-system/theme/index.css';
+import React, { useState } from 'react';
+import { storiesOf } from '@storybook/react';
+import { setInputState } from '@react-design-system/utils';
 
-// import Input from './';
-// import './index.css';
+import Input from './';
+import './index.sass';
 
-// let name = 'name';
-// let label = 'Name';
+const stories = storiesOf('Form/Input', module);
 
-// const storiesWithText = storiesOf('Components/Input/Text', module);
+stories.add('Default', () => {
+  let [state, setState] = useState<{ [key: string]: string }>({});
 
-// storiesWithText.add(
-//   'Default',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+  return (
+    <div>
+      <div>
+        <Input
+          value={state.text}
+          onChange={setInputState({ state, setState })}
+          name="text"
+          type="text"
+          label="Text"
+        />
+      </div>
 
-// storiesWithText.add(
-//   'Required',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//             required
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+      <div>
+        <Input
+          value={state.email}
+          onChange={setInputState({ state, setState })}
+          name="email"
+          type="email"
+          label="Email"
+        />
+      </div>
 
-// const storiesWithColor = storiesOf('Components/Input/Color', module);
+      <div>
+        <Input
+          value={state.number}
+          onChange={setInputState({ state, setState })}
+          name="number"
+          type="number"
+          label="Number"
+        />
+      </div>
 
-// storiesWithColor.add(
-//   'Default',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//             type="color"
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+      <div>
+        <Input
+          value={state.password}
+          onChange={setInputState({ state, setState })}
+          name="password"
+          type="password"
+          label="Password"
+        />
+      </div>
 
-// const storiesWithCheckbox = storiesOf('Components/Input/Checkbox', module);
+      <div>
+        <Input
+          value={state.search}
+          onChange={setInputState({ state, setState })}
+          name="search"
+          type="search"
+          label="Search"
+        />
+      </div>
 
-// storiesWithCheckbox.add(
-//   'Default',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//             type="checkbox"
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+      <div>
+        <Input
+          value={state.tel}
+          onChange={setInputState({ state, setState })}
+          name="tel"
+          type="tel"
+          label="Telephone"
+        />
+      </div>
 
-// const storiesWithDate = storiesOf('Components/Input/Date', module);
+      <div>
+        <Input
+          value={state.url}
+          onChange={setInputState({ state, setState })}
+          name="url"
+          type="url"
+          label="Url"
+        />
+      </div>
 
-// storiesWithDate.add(
-//   'Default',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//             type="date"
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+      <div>
+        <Input
+          value={state.color}
+          onChange={setInputState({ state, setState })}
+          name="color"
+          type="color"
+          label="Color"
+        />
+      </div>
 
-// const storiesWithDateTimeLocal = storiesOf(
-//   'Components/Input/DateTimeLocal',
-//   module
-// );
+      <div>
+        <Input
+          value={state.date}
+          onChange={setInputState({ state, setState })}
+          name="date"
+          type="date"
+          label="Date"
+        />
+      </div>
 
-// storiesWithDateTimeLocal.add(
-//   'Default',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//             type="datetime-local"
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+      <div>
+        <Input
+          value={state['datetime-local']}
+          onChange={setInputState({ state, setState })}
+          name="datetime-local"
+          type="datetime-local"
+          label="Date Time Local"
+        />
+      </div>
 
-// const storiesWithEmail = storiesOf('Components/Input/Email', module);
+      <div>
+        <Input
+          value={state.time}
+          onChange={setInputState({ state, setState })}
+          name="time"
+          type="time"
+          label="Time"
+        />
+      </div>
 
-// storiesWithEmail.add(
-//   'Default',
-//   () => (
-//     <State initialState={{ [name]: '' }}>
-//       {({ state, setState }) => {
-//         return (
-//           <Input
-//             value={state[name]}
-//             onChange={event => {
-//               setInputState({ state, setState })(event);
-//               action('onChange')(event);
-//             }}
-//             name={name}
-//             label={label}
-//             type="email"
-//           />
-//         );
-//       }}
-//     </State>
-//   ),
-//   { info: { inline: true } }
-// );
+      <div>
+        <Input
+          value={state.week}
+          onChange={setInputState({ state, setState })}
+          name="week"
+          type="week"
+          label="Week"
+        />
+      </div>
 
-// const storiesWithFile = storiesOf('Components/Input/File', module);
+      <div>
+        <Input
+          value={state.month}
+          onChange={setInputState({ state, setState })}
+          type="month"
+          name="month"
+          label="Month"
+        />
+      </div>
+
+      <div>
+        <Input
+          value={state.file}
+          onChange={setInputState({ state, setState })}
+          name="file"
+          type="file"
+          label="File"
+        />
+      </div>
+
+      <div>
+        <Input
+          value={state.image}
+          onChange={setInputState({ state, setState })}
+          name="image"
+          type="image"
+          label="Image"
+        />
+      </div>
+
+      <div>
+        <Input
+          value={state.radio}
+          onChange={setInputState({ state, setState })}
+          name="radio"
+          type="radio"
+          label="Radio"
+        />
+      </div>
+
+      <div>
+        <Input
+          value={state.range}
+          onChange={setInputState({ state, setState })}
+          name="range"
+          type="range"
+          label="Range"
+        />
+      </div>
+
+      <div>
+        <Input value="Reset" type="reset" />
+      </div>
+
+      <div>
+        <Input value="Button" type="button" />
+      </div>
+
+      <div>
+        <Input value="Submit" type="submit" />
+      </div>
+    </div>
+  );
+});
+
+stories.add('Required', () => {
+  let [state, setState] = useState<{ [key: string]: string }>({});
+
+  return (
+    <div>
+      <div>
+        <Input
+          required
+          value={state.text}
+          onChange={setInputState({ state, setState })}
+          name="text"
+          type="text"
+          label="Text"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.email}
+          onChange={setInputState({ state, setState })}
+          name="email"
+          type="email"
+          label="Email"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.number}
+          onChange={setInputState({ state, setState })}
+          name="number"
+          type="number"
+          label="Number"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.password}
+          onChange={setInputState({ state, setState })}
+          name="password"
+          type="password"
+          label="Password"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.search}
+          onChange={setInputState({ state, setState })}
+          name="search"
+          type="search"
+          label="Search"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.tel}
+          onChange={setInputState({ state, setState })}
+          name="tel"
+          type="tel"
+          label="Telephone"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.url}
+          onChange={setInputState({ state, setState })}
+          name="url"
+          type="url"
+          label="Url"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.color}
+          onChange={setInputState({ state, setState })}
+          name="color"
+          type="color"
+          label="Color"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.date}
+          onChange={setInputState({ state, setState })}
+          name="date"
+          type="date"
+          label="Date"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state['datetime-local']}
+          onChange={setInputState({ state, setState })}
+          name="datetime-local"
+          type="datetime-local"
+          label="Date Time Local"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.time}
+          onChange={setInputState({ state, setState })}
+          name="time"
+          type="time"
+          label="Time"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.week}
+          onChange={setInputState({ state, setState })}
+          name="week"
+          type="week"
+          label="Week"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.month}
+          onChange={setInputState({ state, setState })}
+          type="month"
+          name="month"
+          label="Month"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.file}
+          onChange={setInputState({ state, setState })}
+          name="file"
+          type="file"
+          label="File"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.image}
+          onChange={setInputState({ state, setState })}
+          name="image"
+          type="image"
+          label="Image"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.radio}
+          onChange={setInputState({ state, setState })}
+          name="radio"
+          type="radio"
+          label="Radio"
+        />
+      </div>
+
+      <div>
+        <Input
+          required
+          value={state.range}
+          onChange={setInputState({ state, setState })}
+          name="range"
+          type="range"
+          label="Range"
+        />
+      </div>
+    </div>
+  );
+});
+
+// const storiesWithFile = storiesOf('Form/Input/File', module);
 
 // storiesWithFile.add(
 //   'Default',
@@ -211,7 +417,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithHidden = storiesOf('Components/Input/Hidden', module);
+// const storiesWithHidden = storiesOf('Form/Input/Hidden', module);
 
 // storiesWithHidden.add(
 //   'Default',
@@ -236,7 +442,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithImage = storiesOf('Components/Input/Image', module);
+// const storiesWithImage = storiesOf('Form/Input/Image', module);
 
 // storiesWithImage.add(
 //   'Default',
@@ -261,7 +467,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithMonth = storiesOf('Components/Input/Month', module);
+// const storiesWithMonth = storiesOf('Form/Input/Month', module);
 
 // storiesWithMonth.add(
 //   'Default',
@@ -286,7 +492,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithNumber = storiesOf('Components/Input/Number', module);
+// const storiesWithNumber = storiesOf('Form/Input/Number', module);
 
 // storiesWithNumber.add(
 //   'Default',
@@ -311,7 +517,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithPassword = storiesOf('Components/Input/Password', module);
+// const storiesWithPassword = storiesOf('Form/Input/Password', module);
 
 // storiesWithPassword.add(
 //   'Default',
@@ -336,7 +542,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithRadio = storiesOf('Components/Input/Radio', module);
+// const storiesWithRadio = storiesOf('Form/Input/Radio', module);
 
 // storiesWithRadio.add(
 //   'Default',
@@ -361,7 +567,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithRange = storiesOf('Components/Input/Range', module);
+// const storiesWithRange = storiesOf('Form/Input/Range', module);
 
 // storiesWithRange.add(
 //   'Default',
@@ -386,7 +592,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithReset = storiesOf('Components/Input/Reset', module);
+// const storiesWithReset = storiesOf('Form/Input/Reset', module);
 
 // storiesWithReset.add(
 //   'Default',
@@ -411,7 +617,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithSearch = storiesOf('Components/Input/Search', module);
+// const storiesWithSearch = storiesOf('Form/Input/Search', module);
 
 // storiesWithSearch.add(
 //   'Default',
@@ -436,7 +642,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithSubmit = storiesOf('Components/Input/Submit', module);
+// const storiesWithSubmit = storiesOf('Form/Input/Submit', module);
 
 // storiesWithSubmit.add(
 //   'Default',
@@ -461,7 +667,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithTel = storiesOf('Components/Input/Tel', module);
+// const storiesWithTel = storiesOf('Form/Input/Tel', module);
 
 // storiesWithTel.add(
 //   'Default',
@@ -486,7 +692,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithTime = storiesOf('Components/Input/Time', module);
+// const storiesWithTime = storiesOf('Form/Input/Time', module);
 
 // storiesWithTime.add(
 //   'Default',
@@ -511,7 +717,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithUrl = storiesOf('Components/Input/Url', module);
+// const storiesWithUrl = storiesOf('Form/Input/Url', module);
 
 // storiesWithUrl.add(
 //   'Default',
@@ -536,7 +742,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithWeek = storiesOf('Components/Input/Week', module);
+// const storiesWithWeek = storiesOf('Form/Input/Week', module);
 
 // storiesWithWeek.add(
 //   'Default',
@@ -584,7 +790,7 @@
 //   { info: { inline: true } }
 // );
 
-// const storiesWithForm = storiesOf('Components/Input/Text/withForm', module);
+// const storiesWithForm = storiesOf('Form/Input/Text/withForm', module);
 
 // storiesWithForm.add(
 //   'Required',

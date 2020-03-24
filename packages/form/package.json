@@ -1,5 +1,5 @@
 {
-  "name": "@react-design-system/input",
+  "name": "@react-design-system/form",
   "version": "0.0.2-alpha.0",
   "license": "MIT",
   "author": {
@@ -10,23 +10,22 @@
   "bugs": {
     "url": "https://github.com/seanWLawrence/react-design-system/issues"
   },
-  "description": "Input for React Design System.",
+  "description": "For components for React Design System.",
   "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/seanWlawrence/react-design-system.git",
-    "directory": "packages/input"
+    "directory": "packages/form"
   },
   "style": "src/index.css",
   "readme": "README.md",
   "keywords": [
     "react",
     "react-form",
-    "react-input",
     "react-design-system"
   ],
   "main": "dist/index.js",
-  "module": "dist/input.esm.js",
+  "module": "dist/form.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
