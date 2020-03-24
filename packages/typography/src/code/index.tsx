@@ -11,11 +11,11 @@ interface CodeProps {
 
 export class Code extends Component<CodeProps, {}> {
   componentDidMount() {
-    import('prismjs').then(() => {
-      if (process.env.NODE_ENV === 'development') {
-        console.info('Loaded Prisma.js');
-      }
-    });
+    // import('prismjs').then(() => {
+    //   if (process.env.NODE_ENV === 'development') {
+    //     console.info('Loaded Prisma.js');
+    //   }
+    // });
   }
 
   render() {
